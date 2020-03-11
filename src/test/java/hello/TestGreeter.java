@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-// Change the comment again to kick off a build
+// Test for name = <'Mario'>
 
 public class TestGreeter {
 
@@ -30,6 +30,17 @@ public class TestGreeter {
       g.setName("World");
       assertEquals(g.getName(),"World");
       assertEquals(g.sayHello(),"Hello World!");
+   }
+
+
+   @Test
+   @DisplayName("Test for Name='Mario'")
+   public void testGreeter() 
+   {
+
+      g.setName("Mario");
+      assertEquals(g.getName(),"Mario");
+      assertEquals(g.sayHello(),"Hello Mario!");
    }
 
 }
